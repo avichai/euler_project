@@ -83,5 +83,5 @@ def compute2():
 
 
 if __name__ == "__main__":
-    print(compute())
     print(compute2())
+    # print(compute())
