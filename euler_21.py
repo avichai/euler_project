@@ -12,6 +12,8 @@
 # Avichai Ben David
 import math
 
+from eulerlib import get_sum_divisors
+
 LIM = 10000
 
 
@@ -50,11 +52,7 @@ def compute():
 
 
 def compute2():
-    sum_divisors = [0] * LIM
-    # compute sum of proper divisor for each number
-    for i in range(1, len(sum_divisors)):
-        for j in range(i * 2, len(sum_divisors), i):
-            sum_divisors[j] += i
+    sum_divisors = get_sum_divisors(LIM)
 
     # find all amicable pairs within range
     res = 0

@@ -37,6 +37,15 @@ def is_prime(n):
     return True
 
 
+def get_sum_divisors(LIM):
+    # compute sum of proper divisor for each number
+    sum_divisors = [0] * LIM
+    for i in range(1, len(sum_divisors)):
+        for j in range(i * 2, len(sum_divisors), i):
+            sum_divisors[j] += i
+    return sum_divisors
+
+
 # cache
 class Memoize(object):
     def __init__(self, func):
